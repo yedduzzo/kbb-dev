@@ -76,7 +76,7 @@ function app() {
         camera.updateProjectionMatrix();
       }
   
-      if (model) model.rotation.y += 0.01;
+      if (model) model.rotation.y += 0.02;
   
       renderer.outputEncoding = THREE.sRGBEncoding;
       renderer.render(scene, camera);
