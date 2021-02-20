@@ -1,8 +1,12 @@
 import 'three';
 import 'three/OrbitControls';
 import 'three/GLTFLoader';
+import 'jquery';
 
 document.addEventListener("deviceready", app, false);
+
+//
+//      --- ThreeJS canvas rendering ---
 
 function app() {
   const canvas = document.querySelector('#c');
@@ -10,11 +14,11 @@ function app() {
 
   const fov = 75;
   const aspect = window.innerWidth / window.innerHeight;  // the canvas default
-  const near = 0.1;
-  const far = 1000;
+  const near = 1;
+  const far = 10;
   const camera = new THREE.PerspectiveCamera(fov, aspect, near, far);
   camera.position.z = 4;
-  camera.position.y = 1;
+  camera.position.y = 0.5;
 
   const scene = new THREE.Scene();
 
@@ -46,10 +50,17 @@ function app() {
   // Objects
   const gltfLoader = new THREE.GLTFLoader();
   var model;
+  var group;
+  var axis;
 
-  gltfLoader.load( 'assets/models/smallStellatedDodecahedronGOLD.glb', function ( gltf ) {
-    model = gltf.scene;
-    scene.add( model );
+  gltfLoader.load( './assets/models/smallStellatedDodecahedronGOLD.glb', function ( gltf ) {
+    model = gltf.scene;  
+    group = new THREE.Group();
+    axis = new THREE.Vector3(0.5, 0, 0).normalize();
+    group.rotateOnAxis(axis, THREE.Math.degToRad(7.5));   // Axis Tilt through group to perserve rotation
+    group.add( model );
+    // adding group instead of the model to perserve rotation
+    scene.add( group );  
   }, undefined, function ( error ) {
     console.error( error );
   } );
@@ -118,30 +129,19 @@ function app() {
   window.addEventListener('mouseout', clearPickPosition);
   window.addEventListener('mouseleave', clearPickPosition);
 
-  // touch mobile support
-  window.addEventListener('touchstart', (event) => {
-    // prevent the window from scrolling
-    event.preventDefault();
-    setPickPosition(event.touches[0]);
-  }, {passive: false});
-   
-  window.addEventListener('touchmove', (event) => {
-    setPickPosition(event.touches[0]);
-  });
-   
-  window.addEventListener('touchend', clearPickPosition);
-  
   const pickHelper = new PickHelper();
 
 
-  // Responsiveness
+  // resizeRenderer
   function resizeRendererToDisplaySize(renderer) {
     const canvas = renderer.domElement;
+    
     const pixelRatio = window.devicePixelRatio;
     const width  = canvas.clientWidth  * pixelRatio | 0;
     const height = canvas.clientHeight * pixelRatio | 0;
     const needResize = canvas.width !== width || canvas.height !== height;
     if (needResize) {
+      renderer.setPixelRatio( 0.7 );
       renderer.setSize(width, height, false);
     }
     return needResize;
@@ -172,3 +172,31 @@ function app() {
 }
 
 app();
+
+
+//
+//      --- JQuery HomePage functions ---
+
+// open TextBox chosing from menu
+$(document).ready(
+  function(){
+      $(".unit").click(function () {
+          $(".textbox").css("display", "block");
+      });
+});
+
+
+// textBox scrollbar Function
+$(document).ready(function() {
+  $(".tcontent").css("max-height", ($(".textbox").height()-$(".thead").height() - 15 ));
+});
+
+
+// close TextBox clicking X
+$(document).ready(
+  function(){
+      $("#textbox-x").click(function () {
+          $(".textbox").css("display", "none");
+      });
+});
+

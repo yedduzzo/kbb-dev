@@ -1,18 +1,78 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8" />
+	<head>
+		<meta charset="utf-8">
         <title>KBB-dev</title>
-        <link rel="stylesheet" href="css/style.css"></link>
-        <script src="https://unpkg.com/lodash@4.17.20"></script>
-    </head>
-    <body>
-        <script type="module" src="main.js"></script>
-        
-        <canvas id="c"></canvas>
+		<link rel="stylesheet" href="css/style.css"></link>
+		<link rel="stylesheet" href="css/menu.css"></link>
+		<link rel="stylesheet" href="css/textbox.css"></link>
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+		</head>
+	<body>
+		<!-- ThreeJS --> 
+        <script type="module" src="js/main.js"></script>
 
-        <!-- The core Firebase JS SDK is always required and must be listed first -->
-        <script src="/__/firebase/8.2.7/firebase-app.js"></script>
-        <script src="/__/firebase/init.js"></script>
-    </body>
+		<canvas id="c"><!-- ThreeJS CANVAS --></canvas>
+		
+		<!-- Circular MENU -->
+		<div class="center noselect" id="center">
+			<ul class="menu">
+				<li class="spread">
+					<a class="unit" href="#" style="background:radial-gradient(darkorange,orange);">
+						<img id="kbb" src="assets/icons/w-014-music_80px.png" title="k^b°b°" class="icon">
+					</a>
+				</li>
+				<li class="spread">
+					<a class="unit" href="#" style="background:radial-gradient(yellow,gold);">
+						<img id="live" src="assets/icons/w-021-podcast.png" title="live" class="icon">
+					</a>
+				</li>
+				<li class="spread">
+					<a class="unit" href="#" style="background:radial-gradient(limegreen,lime);">
+						<img id="contacs" src="assets/icons/w-001-mail inbox app_80px.png" title="contacs" class="icon">
+					</a>
+				</li>
+				<li class="spread">
+					<a class="unit" href="#" style="background:radial-gradient(mediumblue,blue);">
+						<img id="manifesto" src="assets/icons/w-013-news_80px.png" title="manifesto" class="icon">
+					</a>
+				</li>
+				<li class="spread">
+					<a class="unit" href="#" style="background:radial-gradient(mediumorchid,violet);">
+						<img id="roulette" src="assets/icons/w-036-browser_80px.png" title="roulette" class="icon">
+					</a>
+				</li>
+				<li class="spread">
+					<a class="unit" href="#" style="background:radial-gradient(crimson,red);">
+						<img id="we.tiko" src="assets/icons/w-000-wetiko_80px.png" title="we.tiko" class="icon">
+					</a>
+ 				</li>
+			</ul>
+		</div>
+
+
+		<!-- CONTENT -->
+		<div id="textbox" class="textbox">
+			<div class="thead">
+				<div class="textbox-x" id="textbox-x">
+					<span class="bar"></span>
+					<span class="bar"></span>
+				</div>
+				<h1 class="noselect" id="thtitle">About</h1>
+			</div>
+			<div class="tcontent">
+				<div>
+					𝗞^𝗕°𝗕° cerca un rituale, nuovo e antico allo stesso tempo, dove si suona per danzare e si danza per suonare.<br><br>
+					𝗞^𝗕°𝗕° ruba suoni voci movimenti e immagini dalla contemporaneità.<br><br>
+					𝗞^𝗕°𝗕° miscela e interroga i confini tra esotico e familiare rivelando il lato mostruoso che si cela in ognuno di noi: la sensazione di indossare una maschera la cui docilità è garantita da mal celati rapporti di forza.<br><br>
+					Nel tentativo di esorcizzare la Struttura Sociale Vigente, intraprendiamo un viaggio-allegoria della vita in una rappresentazione instabile, pretenziosa, mutevole.<br><br>
+				</div>
+			</div>
+		</div>
+		
+
+	</body>
+	<script src="/__/firebase/8.2.7/firebase-app.js"></script>
+	<script src="/__/firebase/init.js"></script>
 </html>

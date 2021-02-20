@@ -1,0 +1,198 @@
+/* [1] */
+/* [2] */
+/* [3] */
+/* [4] */
+/* [5] */
+/* [6] */
+/* Styles: */
+body, a, ul, li {
+  margin: 0;
+  outline: 0;
+  padding: 0;
+  list-style: none;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+}
+
+html, body {
+  height: 100%;
+  min-height: 480px;
+}
+
+/* MENU style */
+.center {
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  margin-top: -2.25cm;
+}
+
+.center {
+  position: absolute;
+  background: transparent;
+  cursor: pointer;
+  margin: auto;
+  border-radius: 50%;
+  height: 4.5cm;
+  width: 4.5cm;
+  line-height: 4.5cm;
+  text-align: center;
+  font-size: 2.75em;
+  font-weight: bold;
+  -webkit-transition: 0.24s 0.2s;
+  transition: 0.24s 0.2s;
+  z-index: 1;
+}
+
+.menu {
+  position: absolute;
+  top: -154.96063px;
+  left: -154.96063px;
+  border: 240px solid transparent;
+  cursor: default;
+  border-radius: 50%;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-transition: -webkit-transform 1.4s 0.07s;
+  transition: -webkit-transform 1.4s 0.07s;
+  transition: transform 1.4s 0.07s;
+  transition: transform 1.4s 0.07s, -webkit-transform 1.4s 0.07s;
+  z-index: -5;
+}
+
+.spread {
+  position: absolute;
+  top: -170px;
+  left: -170px;
+  -webkit-transform-origin: 170px 170px;
+          transform-origin: 170px 170px;
+  -webkit-transition: all 0.5s 0.1s;
+  transition: all 0.5s 0.1s;
+}
+
+
+.center:hover .menu {
+  -webkit-transition: z-index 0s 0.5s, -webkit-transform 0.4s 0.08s;
+  transition: z-index 0s 0.5s, -webkit-transform 0.4s 0.08s;
+  transition: transform 0.4s 0.08s, z-index 0s 0.5s;
+  transition: transform 0.4s 0.08s, z-index 0s 0.5s, -webkit-transform 0.4s 0.08s;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  z-index: 5;
+}
+
+.center:hover .spread, .center:hover .unit {
+  -webkit-transition: all 0.6s;
+  transition: all 0.6s;
+}
+
+.center:hover .spread:nth-child(1) {
+  -webkit-transition-delay: 0.02s;
+          transition-delay: 0.02s;
+  -webkit-transform: rotate(105deg);
+          transform: rotate(105deg);
+}
+
+.center:hover .spread:nth-child(1) .unit {
+  -webkit-transition-delay: 0.04s;
+          transition-delay: 0.04s;
+  -webkit-transform: rotate(615deg);
+          transform: rotate(615deg);
+}
+
+.center:hover .spread:nth-child(2) {
+  -webkit-transition-delay: 0.04s;
+          transition-delay: 0.04s;
+  -webkit-transform: rotate(165deg);
+          transform: rotate(165deg);
+}
+
+.center:hover .spread:nth-child(2) .unit {
+  -webkit-transition-delay: 0.08s;
+          transition-delay: 0.08s;
+  -webkit-transform: rotate(555deg);
+          transform: rotate(555deg);
+}
+
+.center:hover .spread:nth-child(3) {
+  -webkit-transition-delay: 0.06s;
+          transition-delay: 0.06s;
+  -webkit-transform: rotate(225deg);
+          transform: rotate(225deg);
+}
+
+.center:hover .spread:nth-child(3) .unit {
+  -webkit-transition-delay: 0.12s;
+          transition-delay: 0.12s;
+  -webkit-transform: rotate(495deg);
+          transform: rotate(495deg);
+}
+
+.center:hover .spread:nth-child(4) {
+  -webkit-transition-delay: 0.08s;
+          transition-delay: 0.08s;
+  -webkit-transform: rotate(285deg);
+          transform: rotate(285deg);
+}
+
+.center:hover .spread:nth-child(4) .unit {
+  -webkit-transition-delay: 0.16s;
+          transition-delay: 0.16s;
+  -webkit-transform: rotate(435deg);
+          transform: rotate(435deg);
+}
+
+.center:hover .spread:nth-child(5) {
+  -webkit-transition-delay: 0.1s;
+          transition-delay: 0.1s;
+  -webkit-transform: rotate(345deg);
+          transform: rotate(345deg);
+}
+
+.center:hover .spread:nth-child(5) .unit {
+  -webkit-transition-delay: 0.2s;
+          transition-delay: 0.2s;
+  -webkit-transform: rotate(375deg);
+          transform: rotate(375deg);
+}
+
+.center:hover .spread:nth-child(6) {
+  -webkit-transition-delay: 0.12s;
+          transition-delay: 0.12s;
+  -webkit-transform: rotate(405deg);
+          transform: rotate(405deg);
+}
+
+.center:hover .spread:nth-child(6) .unit {
+  -webkit-transition-delay: 0.24s;
+          transition-delay: 0.24s;
+  -webkit-transform: rotate(315deg);
+          transform: rotate(315deg);
+}
+
+/* END .center:hover */
+.unit {
+  position: absolute;
+  opacity: 1;
+  text-decoration: none;
+  width: 38px;
+  height: 38px;
+  line-height: 38px;
+  border-radius: 50%;
+  -webkit-transition: 0.06s;
+  transition: 0.06s;
+}
+
+.unit:hover {
+  opacity: 0.8;
+  -webkit-box-shadow: inset 0 0 4px #000000;
+  box-shadow: inset 0 0 4px #000000;
+}
+
+.icon {
+  max-width: 34.2px;
+  max-height: 34.2px;
+  -webkit-transform: translate(0, 1.5px);
+          transform: translate(0, 1.5px);
+}
+/*# sourceMappingURL=menu.css.map */
