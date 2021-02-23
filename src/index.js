@@ -135,13 +135,13 @@ function app() {
   // resizeRenderer
   function resizeRendererToDisplaySize(renderer) {
     const canvas = renderer.domElement;
-    
-    const pixelRatio = window.devicePixelRatio;
-    const width  = canvas.clientWidth  * pixelRatio | 0;
-    const height = canvas.clientHeight * pixelRatio | 0;
+    const pixelRatio = 1;
+    const width  = canvas.clientWidth;
+    const height = canvas.clientHeight;
     const needResize = canvas.width !== width || canvas.height !== height;
+    
     if (needResize) {
-      renderer.setPixelRatio( 0.7 );
+      renderer.setPixelRatio( pixelRatio );
       renderer.setSize(width, height, false);
     }
     return needResize;
@@ -179,24 +179,42 @@ app();
 
 // open TextBox chosing from menu
 $(document).ready(
-  function(){
-      $(".unit").click(function () {
-          $(".textbox").css("display", "block");
+  function() { 
+      $(".icon").click(function (event) {
+          if ( event.target.id == "wetiko" ) {
+              $(".textbox").css("display", "none");
+              $("#text_"+event.target.id).css("display", "block");
+              $("#text_"+event.target.id).css("height", "fit-content");
+              $("#content_"+event.target.id).css("height", ( "400px" ));
+          } else if ( event.target.id == "roulette" ) {
+              alert("Roulette ancora in fase di sviluppo!");
+          } else {
+              $(".textbox").css("display", "none");
+              $("#text_"+event.target.id).css("display", "block");
+              $("#text_"+event.target.id).css("height", "fit-content");
+              $("#content_"+event.target.id).css("max-height", ($("#text_"+event.target.id).height()-$(".thead").height() ));
+          }
       });
 });
-
-
-// textBox scrollbar Function
-$(document).ready(function() {
-  $(".tcontent").css("max-height", ($(".textbox").height()-$(".thead").height() - 15 ));
-});
-
 
 // close TextBox clicking X
 $(document).ready(
   function(){
-      $("#textbox-x").click(function () {
+      $(".textbox-x").click(function () {
+          $(".icon").css("pointer-events", "auto");
           $(".textbox").css("display", "none");
       });
 });
+
+
+// DATABASE
+// OnClick submit data to DB
+$(document).ready(
+  function() { 
+      $( "#newsletter" ).submit(function( event ) {
+          alert( "ATTENZIONE - Newsletter non attiva, indirizzo e-mail non registrato!" );
+          event.preventDefault();
+      });
+});
+
 

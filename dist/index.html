@@ -2,6 +2,8 @@
 <html>
 	<head>
 		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>KBB-dev</title>
 		<link rel="stylesheet" href="css/style.css"></link>
 		<link rel="stylesheet" href="css/menu.css"></link>
@@ -32,7 +34,7 @@
 				</li>
 				<li class="spread">
 					<a class="unit" href="#" style="background:radial-gradient(limegreen,lime);">
-						<img id="contacs" src="assets/icons/w-001-mail inbox app_80px.png" title="contacs" class="icon">
+						<img id="contacts" src="assets/icons/w-001-mail inbox app_80px.png" title="contacts" class="icon">
 					</a>
 				</li>
 				<li class="spread">
@@ -47,7 +49,7 @@
 				</li>
 				<li class="spread">
 					<a class="unit" href="#" style="background:radial-gradient(crimson,red);">
-						<img id="we.tiko" src="assets/icons/w-000-wetiko_80px.png" title="we.tiko" class="icon">
+						<img id="wetiko" src="assets/icons/w-000-wetiko_80px.png" title="we.tiko" class="icon">
 					</a>
  				</li>
 			</ul>
@@ -55,16 +57,37 @@
 
 
 		<!-- CONTENT -->
-		<div id="textbox" class="textbox">
+		<!-- WETIKO -->
+		<div id="text_wetiko" class="textbox"> <!-- define class with same name of button id to toggle page-->
 			<div class="thead">
-				<div class="textbox-x" id="textbox-x">
+				<div class="textbox-x">
 					<span class="bar"></span>
 					<span class="bar"></span>
 				</div>
-				<h1 class="noselect" id="thtitle">About</h1>
+				<h2 class="noselect" id="thtitle"><b>We.Tiko</b></h2>
 			</div>
-			<div class="tcontent">
+			<div id="content_wetiko" class="tcontent">
+				<iframe src="https://player.vimeo.com/video/515012774?texttrack=it" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
 				<div>
+					<!-- 𝗞^𝗕°𝗕° cerca un rituale, nuovo e antico allo stesso tempo, dove si suona per danzare e si danza per suonare.<br><br>
+					𝗞^𝗕°𝗕° ruba suoni voci movimenti e immagini dalla contemporaneità.<br><br>
+					𝗞^𝗕°𝗕° miscela e interroga i confini tra esotico e familiare rivelando il lato mostruoso che si cela in ognuno di noi: la sensazione di indossare una maschera la cui docilità è garantita da mal celati rapporti di forza.<br><br>
+					Nel tentativo di esorcizzare la Struttura Sociale Vigente, intraprendiamo un viaggio-allegoria della vita in una rappresentazione instabile, pretenziosa, mutevole.<br><br> -->
+				</div>
+			</div>
+		</div>
+
+		<!-- KBB -->
+		<div id="text_kbb" class="textbox"> <!-- define class with same name of button id to toggle page-->
+			<div class="thead">
+				<div class="textbox-x">
+					<span class="bar"></span>
+					<span class="bar"></span>
+				</div>
+				<h2 class="noselect" id="thtitle"><b>K^B°B°</b></h2>
+			</div>
+			<div id="content_kbb" class="tcontent">
+				<div id="tcontent">
 					𝗞^𝗕°𝗕° cerca un rituale, nuovo e antico allo stesso tempo, dove si suona per danzare e si danza per suonare.<br><br>
 					𝗞^𝗕°𝗕° ruba suoni voci movimenti e immagini dalla contemporaneità.<br><br>
 					𝗞^𝗕°𝗕° miscela e interroga i confini tra esotico e familiare rivelando il lato mostruoso che si cela in ognuno di noi: la sensazione di indossare una maschera la cui docilità è garantita da mal celati rapporti di forza.<br><br>
@@ -73,8 +96,100 @@
 			</div>
 		</div>
 		
+		<!-- LIVE -->
+		<div id="text_live" class="textbox"> <!-- define class with same name of button id to toggle page-->
+			<div class="thead">
+				<div class="textbox-x">
+					<span class="bar"></span>
+					<span class="bar"></span>
+				</div>
+				<h2 class="noselect" id="thtitle"><b>Prossimi riti</b></h2>
+			</div>
+			<div id="content_live" class="tcontent">
+				<div id="tcontent">
+					☃ Al momento non ci sono eventi in vista!
+				</div>
+			</div>
+		</div>
+
+		<!-- CONTACTS -->
+		<div id="text_contacts" class="textbox"> <!-- define class with same name of button id to toggle page-->
+			<div class="thead">
+				<div class="textbox-x">
+					<span class="bar"></span>
+					<span class="bar"></span>
+				</div>
+				<h2 class="noselect" id="thtitle"><b>Contatti</b></h2>
+			</div>
+			<div id="content_contacts" class="tcontent">
+				<div id="contacts">
+					Iscriviti alla nostra newsletter per ricevere aggiornamenti* sul progetto K^B°B°:
+					<form id="newsletter"><br>
+						<input type="text" placeholder="e-mail">
+						<input type="submit" value="Yes thx!">
+					</form><br>
+					<small>*(ti invieremo solo comunicazioni squisitamente non commerciali)</small>
+					<br><br>
+					Oppure attraverso i nostri canali:<br><br>
+					<div>
+						<a href="mailto:kbbcollectif@gmail.com">
+							<span class="mail social"><img class="social_img" title="mailkbb" src="assets/icons/w-001-mail inbox app_80px.png"></span>
+						</a>
+						<a href="tel:+393486610148">
+							<span class="phone social"><img class="social_img" title="callkbb" src="assets/icons/w-041-whatsapp_80px.png"></span>
+						</a>
+						<a href="#" target="_blank">
+							<span class="instagram social"><img class="social_img" title="instakbb" src="assets/icons/w-045-instagram_80px.png"></span>
+						</a>
+						<a href="https://www.facebook.com/kbbcollectif" target="_blank">
+							<span class="facebook social"><img class="social_img" title="facekbb" src="assets/icons/w-038-like_80px.png"></span>
+						</a>
+						<a href="https://www.youtube.com/channel/UCcxxvJuZWLDr03S7JeT97Qw/playlists" target="_blank">
+							<span class="youtube social"><img class="social_img" title="youkbb" src="assets/icons/w-040-youtube_80px.png"></span>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- MANIFESTO -->
+		<div id="text_manifesto" class="textbox"> <!-- define class with same name of button id to toggle page-->
+			<div class="thead">
+				<div class="textbox-x">
+					<span class="bar"></span>
+					<span class="bar"></span>
+				</div>
+				<h2 class="noselect" id="thtitle"><b>Manifesto</b></h2>
+			</div>
+			<div id="content_manifesto" class="tcontent">
+				<div>
+					Le parole che stai per leggere non hanno autore, non appartengono a nessuno e sono quindi di tutti e per tutti.<br>Considerale come uno strumento che non ha valore in s&eacute;, ma che serve solo lo scopo di costruire la realt&agrave;.<br>Nello specifico questo testo pu&ograve; essere definito come manifesto, nel senso che &egrave; programmatico, descrittivo e prescrittivo, ma anche evidente, sotto gli occhi di tutti e per questo soggetto a critiche, ripensamenti, riscritture e negazioni.<br>Non pu&ograve; essere abbinato a una categoria o destinato solo a un certo pubblico: non &egrave; scientifico, artistico o politico in quanto tutti dovremmo essere conoscitori, creatori e governanti della nostra stessa vita.<br>Vuole provare a spiegare la realt&agrave; in cui siamo immersi e il modo in cui cambiarla a nostro favore.&nbsp;
+					<br>Io e te ci muoviamo entro i limiti di un mondo a modello capitalista in cui il continuo accrescimento del s&eacute; ha preso il sopravvento rendendo &quot;l&rsquo;apparenza&quot; il suo principale fondamento. Il reale &egrave; quindi sostituito da una farsa permanente: l&rsquo;individuo &egrave; un account, la comunit&agrave; &egrave; un network, ogni azione possibile &egrave; un semplice accumulo di informazioni e in quanto tale visualizzabile, misurabile e acquistabile. L&rsquo;umanit&agrave; &egrave; sempre sconfitta e sfigurata in questo sistema e noi tutti, io e te compresi, non possiamo pi&ugrave; tollerarlo. Dobbiamo aprire dall&rsquo;interno questo congegno in cui siamo rinchiusi, osservarne i meccanismi e studiare il modo di disinnescarlo. Dobbiamo condividere con tutti la conoscenza che raggiungeremo e ricevere a nostra volta l&rsquo;aiuto di chi ha gi&agrave; intrapreso lo stesso cammino.&nbsp;
+					<br><br>Sappiamo dove e quando cominceremo: qui e ora.
+					<br><br>Questo manifesto &egrave; il primo passo per raccogliere l&rsquo;energia nuova che diffonderemo nella nostra quotidianit&agrave;. La forma che useremo &egrave; quella del collettivo: un gruppo di persone che diventi essa stessa una piccola comunit&agrave; prima di cominciare a muoversi nel mondo.&nbsp;
+					<p style="text-align: center;"><strong>???</strong>
+					<ul style="list-style-type: circle;">
+						<li>L&rsquo;odierno deve essere rimesso in discussione. Bisogna osservare e criticare le opposte dimensioni della nevrosi quotidiana - dall&rsquo;individuale al comunitario. Il metodo di osservazione &egrave; quello dell&rsquo;analisi storica. La critica non pu&ograve; che essere radicale perch&eacute; sia incisiva nel reale.<br><br></li>
+						<li>Le idee devono essere continuamente sommosse. Dobbiamo sempre stimolarci, emotivamente e criticamente, per non cadere nella stagnazione ideologica.<br><br></li>
+						<li>Distruggiamo la suggestione capitalista che ha legato la comunit&agrave; umana al processo valoriale: siamo persone, non risorse. <br><br></li>
+						<li>II progresso incondizionato ci ha trasformati in un costo da valutare e l&rsquo;unico modo per tornare umani &egrave; negare questo progresso. Ogni nostra azione deve essere gratuita e condivisa.<br><br></li>
+						<li>Nel capitalismo il lavoro salariato, professionale e razionale &egrave; il metro di giudizio della nostra stessa moralit&agrave; e chiunque non rientri in questo schema &egrave; considerato una minaccia per il sistema. Ricordiamo a noi stessi e agli altri che la bont&agrave; e l&rsquo;utilit&agrave; del nostro fare non possono essere quantificate.<br><br></li>
+						<li>Rifiutiamo l&rsquo;elitarismo in favore di una disgregazione dell&rsquo;egemonia dei talenti. Virt&ugrave; e merito, declinati nella competizione, sono al servizio del processo di accumulazione e a salvaguardia delle gerarchie sociali esistenti. Tutto ci&ograve; comporta inevitabilmente che ci siano dei vincitori e dei vinti.<br><br></li>
+						<li>Distruggiamo i ruoli specializzati per considerare le possibilit&agrave; della vita nella loro totalit&agrave;. I punti di vista siano condivisi nell&apos;analisi critica dell&apos;esperienza e competenza di tutti, rinunciando volontariamente al sistema di merito come valutazione del proprio operato, in vista di una reale compartecipazione.<br><br></li>
+						<li>L&rsquo;autogestione &egrave; l&rsquo;unico metodo di azione possibile. E&rsquo; necessario includere orizzontalmente sempre pi&ugrave; persone nell&rsquo;ottica di un&rsquo;ultima internazionale del genere umano. <br><br></li>
+						<li>Celebriamo il caso e le sue infinite deviazioni. Quello in cui viviamo non &egrave; il migliore dei mondi possibili. Niente &egrave; determinato e ineluttabile, tutto &egrave; in divenire e mutabile.<br><br></li>
+						<li>Re-integriamo collettivamente l&rsquo;empatia per ricostruire un&rsquo;entit&agrave; sociale collettiva. Rendiamo prioritaria la nostra capacit&agrave; di ascolto per un&rsquo;azione realmente organica.<br><br></li>
+						<li>Dobbiamo distruggere la separazione tra arte e realt&agrave;, a favore di una realt&agrave; che sia un continuo stato dell&rsquo;arte. <br><br></li>
+						<li>Il tempo della festa &egrave; finito, &egrave; ora che cominci una festa senza fine.</li>
+					</ul>
+					<br>
+				</div>
+			</div>
+		</div>
+		
 
 	</body>
 	<script src="/__/firebase/8.2.7/firebase-app.js"></script>
+	<script src="/__/firebase/8.2.7/firebase-database.js"></script>
 	<script src="/__/firebase/init.js"></script>
 </html>

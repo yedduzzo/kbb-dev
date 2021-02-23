@@ -1,0 +1,161 @@
+
+@import '../node_modules/compass-mixins/lib/compass/css3';
+
+$textbox-width: 90%;
+$textbox-height: 200px;
+
+/* Text box */
+#text_wetiko,#text_kbb,#text_live,#text_contacts,#text_manifesto,#text_roulette {
+	display: none;
+	max-height: 90%;
+}
+
+.textbox {
+	position: relative;
+	z-index: 6;
+	background: rgba(0, 0, 0, 0.9);
+	width: $textbox-width;
+	max-width: 700px;
+	padding: 0 20px 20px 20px;
+	border-radius: 20px;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color: rgba(255,255,255, 0.9);
+	text-align: justify;
+	text-justify: inter-word;	
+}
+
+.thead {
+	display: block;
+	position: relative;
+	height: 75px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	overflow: hidden;
+}
+
+.tcontent {
+	display: inline-block;
+	width: 100%;
+	height: calc(100% - 75px);
+	overflow: auto;
+	padding-right: 4px;
+}
+
+
+/* X icon */
+.bar {
+	width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    transition: all 0.3s ease-in-out;
+    background: white;
+}
+
+.textbox-x {
+	position: absolute;
+	top: 20px;
+	right: -2px;
+}
+
+.textbox-x .bar {
+	display: block;
+	cursor: pointer;
+}
+.textbox-x:hover {
+	cursor: pointer;
+	opacity: 0.8;
+}
+.bar:nth-child(1) {
+	transform: translateY(4px) rotate(45deg);
+}    
+.bar:nth-child(2) {
+	transform: translateY(-4px) rotate(-45deg);
+}
+
+
+/* scrollbar Style */
+.tcontent::-webkit-scrollbar {
+	width: 2px;
+  }
+  
+.tcontent::-webkit-scrollbar-track {
+	background: transparent;        /* color of the tracking area */
+	border-radius: 20px;       /* roundness of the scroll thumb */
+}
+
+.tcontent::-webkit-scrollbar-thumb {
+	background-color: transparent;    /* color of the scroll thumb */
+	border-radius: 20px;       /* roundness of the scroll thumb */
+	border: 1.5px solid rgba(255,255,255, 0.9);  /* creates padding around scroll thumb */
+}
+
+
+/* VIMEO videoplayer */
+iframe {
+	display: block;
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+
+
+/* Contacts style */
+#content_contacts {
+	text-align: center;
+}
+
+input {
+	border: 1.5px solid rgba(255,255,255, 0.9);
+	color: white;
+	background-color: transparent;
+	border-radius: 4px;
+}
+
+input:hover {
+	opacity: 0.9;
+}
+input:active {
+	opacity: 0.5;
+}
+
+.social {
+	display: inline-block;
+	width: 50px;
+	height: 50px;
+	margin: 5px;
+	text-align: center;
+	border-radius: 11px;
+	line-height: 50px;
+	vertical-align: middle;
+	box-shadow: 0px 3px 10px rgba(0,0,0,.25);
+}
+
+.social:hover {
+	opacity: 0.8;
+}
+
+.social_img {
+	width: 90%;
+	height: 90%;
+	transform: translateY(2.5px);
+}
+
+.mail {
+	background: #f4b400;
+}
+.phone {
+	background: #4cdc64;
+}
+.instagram {
+	background: #d6249f;
+	background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+}
+.facebook {
+	background: #4267b2;
+}
+.youtube {
+	background: #fc0505;
+}
+
