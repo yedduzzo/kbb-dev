@@ -177,6 +177,32 @@ app();
 //
 //      --- JQuery HomePage functions ---
 
+// Menu mobile resizing
+$(document).ready(function(){
+  if ($(document).width() < 500){
+      var offset = (($(document).width()-75) / 2) ;
+      $("body").css("max-height", "100%");
+      $(".spread").css("top", -offset);
+      $(".spread").css("left", -offset);
+      var origin = (offset+"px "+offset+"px");
+      $(".spread").css("-webkit-transform-origin", origin);
+      $(".spread").css("transform-origin", origin);
+  }
+  if ($(document).height() < 500){
+      var offset = (($(document).height()-57) / 3) ;
+      $("body").css("max-height", (offset*3.5));
+      $(".spread").css("top", -offset);
+      $(".spread").css("left", -offset);
+      var origin = (offset+"px "+offset+"px");
+      $(".spread").css("-webkit-transform-origin", origin);
+      $(".spread").css("transform-origin", origin);
+  }
+});
+// Resize page on view Rotation
+$(window).on("orientationchange",function(){
+  location.reload();
+});
+
 // open TextBox chosing from menu
 $(document).ready(
   function() { 

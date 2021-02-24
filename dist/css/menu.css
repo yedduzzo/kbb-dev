@@ -12,9 +12,18 @@ body, a, ul, li {
   -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
 }
 
+a {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+a:hover {
+  color: white;
+}
+
 html, body {
   height: 100%;
-  min-height: 480px;
+  overflow-x: unset;
+  overflow-y: unset;
 }
 
 /* MENU style */
@@ -23,7 +32,7 @@ html, body {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  margin-top: -2.25cm;
+  margin-top: -75px;
 }
 
 .center {
@@ -31,39 +40,42 @@ html, body {
   background: transparent;
   margin: auto;
   border-radius: 50%;
-  height: 4.5cm;
-  width: 4.5cm;
-  line-height: 4.5cm;
+  height: 150px;
+  width: 150px;
+  line-height: 150px;
   text-align: center;
   font-size: 2.75em;
   font-weight: bold;
   -webkit-transition: 0.24s 0.2s;
   transition: 0.24s 0.2s;
   z-index: 1;
+  border-style: solid;
+  border-color: transparent;
 }
 
 .menu {
   position: absolute;
-  top: -154.96063px;
-  left: -154.96063px;
-  border: 240px solid transparent;
+  top: -155px;
+  left: -155px;
+  border: 230px solid transparent;
   cursor: default;
   border-radius: 50%;
   -webkit-transform: scale(0);
-          transform: scale(0);
+  transform: scale(0);
   -webkit-transition: -webkit-transform 1.4s 0.07s;
   transition: -webkit-transform 1.4s 0.07s;
   transition: transform 1.4s 0.07s;
   transition: transform 1.4s 0.07s, -webkit-transform 1.4s 0.07s;
   z-index: -5;
+  border-color: transparent;
 }
 
 .spread {
   position: absolute;
-  top: -160px;
-  left: -160px;
-  -webkit-transform-origin: 160px 160px;
-          transform-origin: 160px 160px;
+  top: -173px;
+  left: -173px;
+  -webkit-transform-origin: 173px 173px;
+  transform-origin: 173px 173px;
   -webkit-transition: all 0.5s 0.1s;
   transition: all 0.5s 0.1s;
   list-style: none;
@@ -79,7 +91,7 @@ html, body {
   transition: transform 0.4s 0.08s, z-index 0s 0.5s;
   transition: transform 0.4s 0.08s, z-index 0s 0.5s, -webkit-transform 0.4s 0.08s;
   -webkit-transform: scale(1);
-          transform: scale(1);
+  transform: scale(1);
   z-index: 5;
 }
 
