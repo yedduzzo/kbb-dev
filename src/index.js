@@ -229,6 +229,7 @@ $(document).ready(
       $(".textbox-x").click(function () {
           $(".icon").css("pointer-events", "auto");
           $(".textbox").css("display", "none");
+          $('iframe').attr('src', $('iframe').attr('src'));
       });
 });
 
