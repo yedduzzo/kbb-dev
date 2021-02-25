@@ -31,7 +31,7 @@ html, body {
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
   margin-top: -75px;
 }
 
@@ -76,6 +76,7 @@ html, body {
   left: -173px;
   -webkit-transform-origin: 173px 173px;
   transform-origin: 173px 173px;
+  transform-box: fill-box;
   -webkit-transition: all 0.5s 0.1s;
   transition: all 0.5s 0.1s;
   list-style: none;
@@ -104,84 +105,84 @@ html, body {
   -webkit-transition-delay: 0.02s;
           transition-delay: 0.02s;
   -webkit-transform: rotate(105deg);
-          transform: rotate(105deg);
+  transform: rotate(105deg);
 }
 
 .center:hover .spread:nth-child(1) .unit {
   -webkit-transition-delay: 0.04s;
           transition-delay: 0.04s;
   -webkit-transform: rotate(615deg);
-          transform: rotate(615deg);
+  transform: rotate(615deg);
 }
 
 .center:hover .spread:nth-child(2) {
   -webkit-transition-delay: 0.04s;
           transition-delay: 0.04s;
   -webkit-transform: rotate(165deg);
-          transform: rotate(165deg);
+  transform: rotate(165deg);
 }
 
 .center:hover .spread:nth-child(2) .unit {
   -webkit-transition-delay: 0.08s;
           transition-delay: 0.08s;
   -webkit-transform: rotate(555deg);
-          transform: rotate(555deg);
+  transform: rotate(555deg);
 }
 
 .center:hover .spread:nth-child(3) {
   -webkit-transition-delay: 0.06s;
           transition-delay: 0.06s;
   -webkit-transform: rotate(225deg);
-          transform: rotate(225deg);
+  transform: rotate(225deg);
 }
 
 .center:hover .spread:nth-child(3) .unit {
   -webkit-transition-delay: 0.12s;
           transition-delay: 0.12s;
   -webkit-transform: rotate(495deg);
-          transform: rotate(495deg);
+  transform: rotate(495deg);
 }
 
 .center:hover .spread:nth-child(4) {
   -webkit-transition-delay: 0.08s;
           transition-delay: 0.08s;
   -webkit-transform: rotate(285deg);
-          transform: rotate(285deg);
+  transform: rotate(285deg);
 }
 
 .center:hover .spread:nth-child(4) .unit {
   -webkit-transition-delay: 0.16s;
           transition-delay: 0.16s;
   -webkit-transform: rotate(435deg);
-          transform: rotate(435deg);
+  transform: rotate(435deg);
 }
 
 .center:hover .spread:nth-child(5) {
   -webkit-transition-delay: 0.1s;
           transition-delay: 0.1s;
   -webkit-transform: rotate(345deg);
-          transform: rotate(345deg);
+  transform: rotate(345deg);
 }
 
 .center:hover .spread:nth-child(5) .unit {
   -webkit-transition-delay: 0.2s;
           transition-delay: 0.2s;
   -webkit-transform: rotate(375deg);
-          transform: rotate(375deg);
+  transform: rotate(375deg);
 }
 
 .center:hover .spread:nth-child(6) {
   -webkit-transition-delay: 0.12s;
           transition-delay: 0.12s;
   -webkit-transform: rotate(405deg);
-          transform: rotate(405deg);
+  transform: rotate(405deg);
 }
 
 .center:hover .spread:nth-child(6) .unit {
   -webkit-transition-delay: 0.24s;
           transition-delay: 0.24s;
   -webkit-transform: rotate(315deg);
-          transform: rotate(315deg);
+  transform: rotate(315deg);
 }
 
 /* END .center:hover */
@@ -210,7 +211,7 @@ html, body {
 .icon {
   max-width: 34.2px;
   max-height: 34.2px;
-  -webkit-transform: translate(0, -1.5px);
-          transform: translate(0, -1.5px);
+  -webkit-transform: translate(0, -1.8px);
+  transform: translate(0, -1.8px);
 }
 /*# sourceMappingURL=menu.css.map */

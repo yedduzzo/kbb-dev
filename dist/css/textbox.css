@@ -15,7 +15,7 @@
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
   color: rgba(255, 255, 255, 0.9);
   text-align: justify;
   text-justify: inter-word;
@@ -66,12 +66,12 @@
 
 .bar:nth-child(1) {
   -webkit-transform: translateY(4px) rotate(45deg);
-          transform: translateY(4px) rotate(45deg);
+  transform: translateY(4px) rotate(45deg);
 }
 
 .bar:nth-child(2) {
   -webkit-transform: translateY(-4px) rotate(-45deg);
-          transform: translateY(-4px) rotate(-45deg);
+  transform: translateY(-4px) rotate(-45deg);
 }
 
 /* scrollbar Style */
@@ -144,7 +144,7 @@ input:active {
   width: 90%;
   height: 90%;
   -webkit-transform: translateY(2.5px);
-          transform: translateY(2.5px);
+  transform: translateY(2.5px);
 }
 
 .mail {

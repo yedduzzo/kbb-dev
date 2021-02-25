@@ -36,6 +36,8 @@ html,body{
 .center{
 	top: 50%;
 	left: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	-moz-transform: translate(-50%, -50%);
 	transform: translate(-50%, -50%);
 	margin-top: $center-size/-2;
 }
@@ -66,8 +68,6 @@ html,body{
 	border-radius: 50%;
 	-webkit-transform: scale(0);
 	-moz-transform: scale(0);
-	-ms-transform: scale(0);
-	-o-transform: scale(0);
 	transform: scale(0);
 	transition: transform 1.4s 0.07s;
 	z-index: -5;
@@ -79,7 +79,9 @@ html,body{
 	top: -($offset);
 	left: -($offset);
 	-webkit-transform-origin: $offset $offset;
+	-moz-transform-origin: $offset $offset;
 	transform-origin: $offset $offset;
+	transform-box: fill-box;
 	transition: all 0.5s 0.1s;
 	list-style: none;
 }
@@ -90,8 +92,6 @@ html,body{
 			transition: transform 0.4s 0.08s, z-index 0s 0.5s;
 			-webkit-transform: scale(1);
 			-moz-transform: scale(1);
-			-ms-transform: scale(1);
-			-o-transform: scale(1);
 			transform: scale(1);
 			z-index: 5;
 		}
@@ -103,9 +103,13 @@ html,body{
 	 @for $m from 1 through $li {
 	   .spread:nth-child(#{$m}) {
 		    transition-delay: $m * 0.02s;
+		    -webkit-transform: rotate(45 + $deg * $m);
+		    -moz-transform: rotate(45 + $deg * $m);
 		    transform: rotate(45 + $deg * $m);
 		    .unit {
 			     transition-delay: $m * 0.04s;
+			     -webkit-transform: rotate(-$deg * $m + 720 - 45);
+			     -moz-transform: rotate(-$deg * $m + 720 - 45);
 			     transform: rotate(-$deg * $m + 720 - 45);
 		    }
 	   }
@@ -138,7 +142,9 @@ html,body{
 .icon {
 	max-width: $unit-size * 0.9;
 	max-height: $unit-size * 0.9;
-	transform: translate(0, -1.5px);
+	-webkit-transform: translate(0, -1.8px);
+	-moz-transform: translate(0, -1.8px);
+	transform: translate(0, -1.8px);
 }
 
 
