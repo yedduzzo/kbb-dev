@@ -179,16 +179,18 @@ app();
 
 // Menu mobile resizing
 $(document).ready(function(){
-  if ($(document).width() < 500){
-      var offset = (($(document).width()-75) / 2) ;
-      $("body").css("max-height", "100%");
-      $(".spread").css("top", -offset);
-      $(".spread").css("left", -offset);
-      var origin = (offset+"px "+offset+"px");
-      $(".spread").css("-webkit-transform-origin", origin);
-      $(".spread").css("transform-origin", origin);
-  }
-  if ($(document).height() < 500){
+  // if mobile resize menu
+  if ($(document).width() < 500) {
+    var offset = (($(document).width()-75) / 2) ;
+    $("body").css("max-height", "100%");
+    $(".spread").css("top", -offset);
+    $(".spread").css("left", -offset);
+    var origin = (offset+"px "+offset+"px");
+    $(".spread").css("-webkit-transform-origin", origin);
+    $(".spread").css("transform-origin", origin);
+  } 
+  // if rotated mobile resize menu
+  if ($(document).height() < 500) {
       var offset = (($(document).height()-57) / 3) ;
       $("body").css("max-height", (offset*3.5));
       $(".spread").css("top", -offset);
@@ -196,9 +198,30 @@ $(document).ready(function(){
       var origin = (offset+"px "+offset+"px");
       $(".spread").css("-webkit-transform-origin", origin);
       $(".spread").css("transform-origin", origin);
+  } 
+  // if tablet resize menu
+  if ($(document).width() > 1000 && $(document).height() > $(document).width()) {
+      var offset = (($(document).width()-75) / 3) ;
+      $("body").css("max-height", "100%");
+      $(".spread").css("top", -offset);
+      $(".spread").css("left", -offset);
+      var origin = (offset+"px "+offset+"px");
+      $(".spread").css("-webkit-transform-origin", origin);
+      $(".spread").css("transform-origin", origin);
+  } 
+  // if rotated tablet resize menu
+  if ($(document).height() > 1000 && $(document).height() < $(document).width()) {
+  alert("AIUTO!");
+      var offset = (($(document).height()-57) / 4) ;
+      $("body").css("max-height", (offset*4));
+      $(".spread").css("top", -offset);
+      $(".spread").css("left", -offset);
+      var origin = (offset+"px "+offset+"px");
+      $(".spread").css("-webkit-transform-origin", origin);
+      $(".spread").css("transform-origin", origin);
   }
 });
-// Resize page on view Rotation
+// Reload page on view Rotation
 $(window).on("orientationchange",function(){
   location.reload();
 });
