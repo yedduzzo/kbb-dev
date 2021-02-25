@@ -33,6 +33,7 @@ html, body {
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   margin-top: -75px;
+  cursor: pointer;
 }
 
 .center {
@@ -196,6 +197,7 @@ html, body {
   border-radius: 50%;
   -webkit-transition: 0.06s;
   transition: 0.06s;
+  cursor: pointer;
 }
 
 .unit:hover {
@@ -213,5 +215,6 @@ html, body {
   max-height: 34.2px;
   -webkit-transform: translate(0, -1.8px);
   transform: translate(0, -1.8px);
+  cursor: pointer;
 }
 /*# sourceMappingURL=menu.css.map */
